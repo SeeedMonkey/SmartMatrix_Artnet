@@ -53,7 +53,7 @@ void setup() {
 
 void loop() {
  
-	artnet.read();
+	if (sendFrame == 0) 	artnet.read();
 }
 void onDmxFrame(uint16_t universe, uint16_t length, uint8_t sequence, uint8_t* data)
 {
